@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Revisão</title>
+</head>
+
+<body>
+    <header>
+        <div id="user">
+            <div>
+                <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="45" cx="50" cy="50" fill="#0c97e7" />
+                    <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40" dy=".4em">US</text>
+                </svg>
+            </div>
+            <div>
+                Painel de Controle
+            </div>
+        </div>
+        <div id="itens-Header">
+            <div>
+                <i class="material-icons">homed</i>
+                Visão Geral
+            </div>
+            <div>
+                <i class="material-icons">folderd</i>
+                Projetos
+            </div>
+            <div>
+                <i class="material-icons">taskd</i>
+                Tarefas
+            </div>
+            <div>
+                <i class="material-icons">reportd</i>
+                Relatórios
+            </div>
+            <div>
+                <img class="icon" src="img/Config-White-ic.png" alt="Configurações">
+                Configurações
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="Dashboard">
+            <div class="topo-Dashboard">
+                <div class="title-Dashboard">
+                    <h1>Dashboard</h1>
+                    <i class="material-icons">search</i>
+                </div>
+
+                <div class="input-Busca">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+
+                <div class="logout">
+                    <button>Logout <i class="material-icons">logout</i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="cards-Dashboard">
+            <div class="card">
+                <h2>Projetos Ativos</h2>
+                <h1>12</h1>
+            </div>
+            <div class="card">
+                <h2>Tarefas Concluidas</h2>
+                <h1>48</h1>
+            </div>
+            <div class="card">
+                <h2>Alertas Pendentes</h2>
+                <h1>5</h1>
+            </div>
+        </div>
+
+        <div id="tarefas-dashboard">
+            <h2>Tarefas Recentes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Responsável</th>
+                        <th>Data de Vencimento</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-titulo" data-label="Título">Implementar Login</td>
+                        <td class="col-responsavel" data-label="Responsável">João Silva</td>
+                        <td class="col-data" data-label="Data de Vencimento">15/08/2023</td>
+                        <td data-label="Status">
+                            <span class="status-badge status-andamento">Em Andamento</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-titulo" data-label="Título">Design Responsivo</td>
+                        <td class="col-responsavel" data-label="Responsável">Maria Santos</td>
+                        <td class="col-data" data-label="Data de Vencimento">20/08/2023</td>
+                        <td data-label="Status">
+                            <span class="status-badge status-pendente">Pendente</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-titulo" data-label="Título">Testes Unitários</td>
+                        <td class="col-responsavel" data-label="Responsável">Carlos Oliveira</td>
+                        <td class="col-data" data-label="Data de Vencimento">10/08/2023</td>
+                        <td data-label="Status">
+                            <span class="status-badge status-concluido">Concluído</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-titulo" data-label="Título">Documentação</td>
+                        <td class="col-responsavel" data-label="Responsável">Ana Costa</td>
+                        <td class="col-data" data-label="Data de Vencimento">25/08/2023</td>
+                        <td data-label="Status">
+                            <span class="status-badge status-pendente">Pendente</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="Minhas-Tarefas">
+            <div class="card">
+                <h1>Tarefa A</h1>
+                <p>Design de Interação</p>
+                <div class="N-Prioridade-Alta">Alta Prioridade</div>
+            </div>
+            <div class="card">
+                <h1>Tarefa B</h1>
+                <p>Desenvolvimento Backend</p>
+                <div class="N-Prioridade-Media">Media Prioridade</div>
+            </div>
+            <div class="card">
+                <h1>Tarefa C</h1>
+                <p>Testes de Usabilidade</p>
+                <div class="N-Prioridade-Baixa">Baixa Prioridade</div>
+            </div>
+            <div class="card">
+                <h1>Tarefa D</h1>
+                <p>Documentação Técnica</p>
+                <div class="N-Prioridade-Media">Media Prioridade</div>
+            </div>
+            
+        </div>
+
+        <div id="Criar-Projeto">
+            <form action="">
+                <h2>Criar Novo Projeto</h2>
+                <div class="input-group">
+                    <label for="nome-projeto">Nome do Projeto</label>
+                    <input type="text" id="nome-projeto" name="nome-projeto" required>
+                </div>
+                <div class="input-group">
+                    <label for="responsavel">Responsável</label>
+                    <input type="text" id="responsavel" name="responsavel" required>
+                </div>
+                <div class="input-group">
+                    <label for="Prazo">Prazo</label>
+                    <input type="date" id="Prazo" name="Prazo" required>
+                </div>
+                <div class="input-group">
+                    <label for="descricao-projeto">Descrição</label>
+                    <textarea id="descricao-projeto" name="descricao-projeto" rows="4" required></textarea>
+                </div>
+                <button type="submit">Criar Projeto</button>
+            </form>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
